@@ -1,0 +1,59 @@
+@use "../../styles/variables";
+
+.searchInput {
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.searchField {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 12px;
+  gap: 8px;
+  border: none;
+  padding: 18px 20px;
+  background-color: variables.$input-white;
+  margin-bottom: 40px;
+}
+
+.location {
+  color: variables.$body;
+}
+
+.filterContainer {
+  width: 360px;
+  min-width: 360px;
+}
+
+.catalogContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 64px;
+}
+
+.filterEquipment {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.filterTitle {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.errorMessage {
+  color: variables.$primary-black;
+  min-width: 100%;
+}
+
+.filterBtn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filterType {
+  margin-bottom: 40px;
+}

@@ -1,0 +1,23 @@
+.featuresList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0px;
+  max-height: calc(2 * 48px + 8px);
+  overflow: hidden;
+  gap: 8px;
+  row-gap: 8px;
+  margin-bottom: 24px;
+}
+
+.feature {
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 100px;
+  background-color: #f2f4f7;
+  border: 1px solid #f2f4f7;
+}

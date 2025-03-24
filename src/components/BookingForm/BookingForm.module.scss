@@ -1,0 +1,38 @@
+@use "../../styles/variables";
+.formItem {
+  margin-bottom: 14px;
+}
+
+.formField {
+  background-color: variables.$input-white;
+  padding: 18px;
+  border: none;
+  border-radius: 12px;
+  width: 100%;
+  outline: none;
+}
+
+.textArea {
+  background-color: variables.$input-white;
+  padding: 18px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+.formContainer {
+  padding: 44px 57px;
+  border-radius: 10px;
+  border: 1px solid variables.$light-gray;
+  width: 588px;
+}
+
+.bookingTitle {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.bookingDescription {
+  margin-bottom: 24px;
+}

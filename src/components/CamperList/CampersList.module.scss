@@ -1,0 +1,22 @@
+@use "../../styles/variables";
+
+.listWrapper {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  width: 888px;
+  margin-bottom: 40px;
+}
+
+.camperList {
+  list-style: none;
+  border: 1px solid variables.$light-gray;
+  border-radius: 20px;
+}
+
+.btn {
+  justify-items: center;
+}

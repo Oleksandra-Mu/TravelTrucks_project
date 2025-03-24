@@ -1,22 +1,32 @@
-// src/components/App.jsx
+import { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
 
-import Product from "./Product";
+import Navigation from "./Navigation/Navigation";
+const NotFound = lazy(() => import("../pages/NotFound/NotFound"));
+const HomePage = lazy(() => import("../pages/HomePage/HomePage.jsx"));
+const CatalogPage = lazy(() => import("../pages/CatalogPage/CatalogPage"));
+const ItemDetailsPage = lazy(() =>
+  import("../pages/ItemDetailsPage/ItemDetailsPage")
+);
+const Features = lazy(() => import("../components/Features/Features"));
+const Reviews = lazy(() => import("../components/Reviews/Reviews"));
 
 export default function App() {
- return (
-  <div>
-   <h1>Best selling</h1>
-
-   <Product
-    name="Tacos With Lime"
-    imgUrl="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?dpr=2&h=480&w=640"
-    price={10.99}
-   />
-   <Product
-    name="Fries and Burger"
-    imgUrl="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?dpr=2&h=480&w=640"
-    price={14.29}
-   />
-  </div>
- );
+  return (
+    <>
+      <Navigation />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/catalog" element={<CatalogPage />} />
+          <Route path="/catalog/:id" element={<ItemDetailsPage />}>
+            <Route path="features" element={<Features />} />
+            <Route path="reviews" element={<Reviews />} />
+          </Route>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
+    </>
+  );
 }

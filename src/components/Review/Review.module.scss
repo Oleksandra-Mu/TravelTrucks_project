@@ -1,0 +1,35 @@
+@use "../../styles/variables";
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: variables.$input-white;
+  color: variables.$primary-red;
+  align-content: center;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.33;
+  font-weight: 600;
+}
+
+.reviewList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  margin-top: 56px;
+}
+
+.reviewTop {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.nameRating {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

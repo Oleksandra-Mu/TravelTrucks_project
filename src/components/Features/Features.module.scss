@@ -1,0 +1,32 @@
+.featureContainer {
+  background-color: #f2f4f7;
+  padding: 44px 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.vehicleDetails {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.vehicleDetailsItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.featuresList {
+  max-height: calc(3 * 48px + 2 * 8px);
+}
