@@ -15,7 +15,7 @@
     text-align: center;
     height: 96px;
     border-radius: 12px;
-    border-color: variables.$light-gray;
+    border: 1px solid variables.$light-gray;
     &.active {
       border: 1px solid variables.$hover-red;
     }

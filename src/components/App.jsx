@@ -3,20 +3,21 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 
 import Navigation from "./Navigation/Navigation";
+import HomePage from "./../pages/HomePage/HomePage";
+import Features from "./Features/Features";
+import Reviews from "./Reviews/Reviews";
+import Loader from "./Loader/Loader";
 const NotFound = lazy(() => import("../pages/NotFound/NotFound"));
-const HomePage = lazy(() => import("../pages/HomePage/HomePage.jsx"));
 const CatalogPage = lazy(() => import("../pages/CatalogPage/CatalogPage"));
 const ItemDetailsPage = lazy(() =>
   import("../pages/ItemDetailsPage/ItemDetailsPage")
 );
-const Features = lazy(() => import("../components/Features/Features"));
-const Reviews = lazy(() => import("../components/Reviews/Reviews"));
 
 export default function App() {
   return (
     <>
       <Navigation />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<CatalogPage />} />

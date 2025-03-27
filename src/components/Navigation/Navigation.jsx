@@ -9,7 +9,11 @@ const Navigation = () => {
   return (
     <header>
       <div className={css.wrapper}>
-        <img className={css.logo} src="src\images\Logo.webp" alt="logo" />
+        <NavLink to="/" className={css.logo}>
+          <svg width="132" height="16" viewBox="0 0 132 16">
+            <use href="/icons.svg#icon-logo"></use>
+          </svg>
+        </NavLink>
         <nav className={css.navigation}>
           <ul>
             <li>

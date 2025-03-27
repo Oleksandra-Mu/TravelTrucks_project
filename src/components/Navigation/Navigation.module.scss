@@ -26,10 +26,16 @@ header {
 }
 
 .logo {
-  position: absolute;
   left: 64px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 132px;
+  height: 20px;
 }
-
+svg use {
+  transform-origin: center center;
+}
 .navLink {
   text-decoration: none;
   color: variables.$primary-black;
