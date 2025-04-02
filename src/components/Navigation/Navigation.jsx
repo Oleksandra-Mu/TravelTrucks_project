@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import css from "./Navigation.module.scss";
 import clsx from "clsx";
-import Icons from "../Icons/Icons";
+import logo from "../../images/logo.svg";
 
 const Navigation = () => {
   const getActiveClass = ({ isActive }) => {
@@ -10,7 +10,7 @@ const Navigation = () => {
   return (
     <header className={css.wrapper}>
       <NavLink to="/" className={css.logo}>
-        <Icons name={"logo"} width={132} height={16} />
+        <img src={logo} alt="logo" />
       </NavLink>
       <nav className={css.navigation}>
         <ul>
