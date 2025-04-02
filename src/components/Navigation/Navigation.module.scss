@@ -5,14 +5,9 @@ header {
   justify-content: center;
   width: 100%;
   background-color: #f7f7f7;
-}
-.wrapper {
-  position: relative;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
   padding: 28px 0;
+  position: relative;
 }
 
 .navigation {
@@ -20,8 +15,8 @@ header {
     display: flex;
     list-style: none;
     gap: 32px;
-    margin: 0;
-    padding: 0;
+    padding: 0px;
+    margin: 0px;
   }
 }
 
@@ -30,12 +25,10 @@ header {
   display: flex;
   align-items: center;
   position: absolute;
-  width: 132px;
-  height: 20px;
+  flex-shrink: 0;
+  z-index: 1;
 }
-svg use {
-  transform-origin: center center;
-}
+
 .navLink {
   text-decoration: none;
   color: variables.$primary-black;
